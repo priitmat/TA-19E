@@ -12,16 +12,69 @@
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/secondNumberEditText" />    
-    <Button
-        android:text="Liida"
+        android:id="@+id/secondNumberEditText" />
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/addButton" />
-    <TextView
-        android:text="Vastus"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/linearLayout1" 
+        >
+        <Button
+            android:text="@string/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/addButton"
+            android:layout_weight="1" 
+        />
+        <Button
+            android:text="@string/subtract_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/subtractButton"
+            android:layout_weight="1" 
+        />
+        <Button
+            android:text="@string/multiply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/multiplyButton"
+            android:layout_weight="1" 
+        />
+        <Button
+            android:text="@string/divide_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/divideButton"
+            android:layout_weight="1" 
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/answerTextView" />
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:id="@+id/linearLayout2" >
+        <TextView
+            android:text="Vastus"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/answerTextView"
+            android:gravity="center"            
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryTextDark"             
+        />
+    </LinearLayout>
 </LinearLayout>
