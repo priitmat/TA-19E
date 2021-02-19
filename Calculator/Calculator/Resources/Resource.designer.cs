@@ -3778,10 +3778,10 @@ namespace Calculator
 			public const int time = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int tipEditText = 2131230902;
+			public const int tipSeekBar = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int tipSeekBar = 2131230903;
+			public const int tipTextView = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
 			public const int tipTotalTextView = 2131230904;

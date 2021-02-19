@@ -15,7 +15,7 @@ namespace Calculator
     public class TipcalcActivity : Activity
     {
         EditText _subtotalEditText;
-        EditText _tipEditText;
+        TextView _tipTextView;
         SeekBar _tipSeekbar;
         TextView _billTotalTextView;
         TextView _tipTotalTextView;
@@ -27,23 +27,17 @@ namespace Calculator
             // Create your application here
 
             _subtotalEditText = FindViewById<EditText>(Resource.Id.subTotalEditText);
-            _tipEditText = FindViewById<EditText>(Resource.Id.tipEditText);
+            _tipTextView = FindViewById<TextView>(Resource.Id.tipTextView);
             _tipSeekbar = FindViewById<SeekBar>(Resource.Id.tipSeekBar);
             _billTotalTextView = FindViewById<TextView>(Resource.Id.billTotalTextView);
             _tipTotalTextView = FindViewById<TextView>(Resource.Id.tipTotalTextView);
 
-            _tipSeekbar.ProgressChanged += TipSeekbar_ProgressChanged;
-            _tipEditText.TextChanged += _tipEditText_TextChanged;
-        }
-
-        private void _tipEditText_TextChanged(object sender, Android.Text.TextChangedEventArgs e)
-        {
-            _tipSeekbar.Progress = int.Parse(_tipEditText.Text);
-        }
+            _tipSeekbar.ProgressChanged += TipSeekbar_ProgressChanged;            
+        }  
 
         private void TipSeekbar_ProgressChanged(object sender, SeekBar.ProgressChangedEventArgs e)
         {
-            _tipEditText.Text = e.Progress.ToString();
+            _tipTextView.Text = e.Progress.ToString();
         }
     }
 }

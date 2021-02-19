@@ -10,11 +10,11 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/subTotalEditText" />
-    <EditText
+    <TextView
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tipEditText" />
+        android:id="@+id/tipTextView" />
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
