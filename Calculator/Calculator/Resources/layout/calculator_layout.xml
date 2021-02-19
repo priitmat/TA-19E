@@ -70,11 +70,13 @@
         <TextView
             android:text="Vastus"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
+            android:textSize="40dp"
             android:id="@+id/answerTextView"
-            android:gravity="center"            
-            android:background="@color/colorAccent"
-            android:textColor="@color/colorPrimaryTextDark"             
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorPrimaryTextDark"
+            style="GreenText"
         />
     </LinearLayout>
 </LinearLayout>
