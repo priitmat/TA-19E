@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
@@ -6,6 +7,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using ListExercise.Models;
 
 namespace ListExercise
 {
@@ -25,9 +27,47 @@ namespace ListExercise
             fab.Click += FabOnClick;
 
 
-            var items = new string[] { "Audi", "Volkswagen", "Bmw", "Fiat" };
+            var items = new List<Car>
+            {
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
+                new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
+                new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
+                new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
+                new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
+                new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
+                new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
+                new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
+                new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
+                new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
+                new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
+                new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
+                new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
+                new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
+                new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
+                new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},
+            };
+
             var carListView = FindViewById<ListView>(Resource.Id.carListView);
-            carListView.Adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, items);
+            carListView.Adapter = new CarAdapter(this, items);
 
         }
 
