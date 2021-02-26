@@ -42,9 +42,11 @@ namespace ListExercise
         {
             View view = convertView;
             if (view == null)
-                view = _context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem2, null);
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = _items[position].Manufacturer;
-            view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = _items[position].Model;
+                view = _context.LayoutInflater.Inflate(Resource.Layout.car_row_layout, null);
+            view.FindViewById<TextView>(Resource.Id.manufacturerTextView).Text = _items[position].Manufacturer;
+            view.FindViewById<TextView>(Resource.Id.modelTextView).Text = _items[position].Model;
+            view.FindViewById<TextView>(Resource.Id.kwTextView).Text = _items[position].Kw.ToString();
+
             return view;
         }
     }
