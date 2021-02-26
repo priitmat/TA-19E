@@ -19,6 +19,7 @@ namespace Calculator
         SeekBar _tipSeekbar;
         TextView _billTotalTextView;
         TextView _tipTotalTextView;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,8 +33,9 @@ namespace Calculator
             _billTotalTextView = FindViewById<TextView>(Resource.Id.billTotalTextView);
             _tipTotalTextView = FindViewById<TextView>(Resource.Id.tipTotalTextView);
 
-            _tipSeekbar.ProgressChanged += TipSeekbar_ProgressChanged;            
-        }  
+            _tipSeekbar.ProgressChanged += TipSeekbar_ProgressChanged;          
+        }
+
 
         private void TipSeekbar_ProgressChanged(object sender, SeekBar.ProgressChangedEventArgs e)
         {
