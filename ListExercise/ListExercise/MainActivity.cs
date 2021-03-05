@@ -29,10 +29,10 @@ namespace ListExercise
 
             var items = new List<Car>
             {
-                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80},
+                new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80, Image = Resource.Drawable.ford },
                 new Car{ Manufacturer = "Bmw", Model = "3 seeria", Kw = 35},
                 new Car{ Manufacturer = "Mercedes", Model = "E klass", Kw = 263},
-                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343},
+                new Car{ Manufacturer = "Volkswagen", Model = "Passat", Kw = 343, Image = Resource.Drawable.volkswagen},
                 new Car{ Manufacturer = "Fiat", Model = "Punto", Kw = 555},
                 new Car{ Manufacturer = "Ferrari", Model = "360", Kw = 34},
                 new Car{ Manufacturer = "Lamborghini", Model = "Hurracan", Kw = 234},

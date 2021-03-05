@@ -46,7 +46,14 @@ namespace ListExercise
             view.FindViewById<TextView>(Resource.Id.manufacturerTextView).Text = _items[position].Manufacturer;
             view.FindViewById<TextView>(Resource.Id.modelTextView).Text = _items[position].Model;
             view.FindViewById<TextView>(Resource.Id.kwTextView).Text = _items[position].Kw.ToString();
-
+            if(_items[position].Image != 0)
+            {
+                view.FindViewById<ImageView>(Resource.Id.logoImageView).SetImageResource(_items[position].Image);
+            }
+            else
+            {
+                view.FindViewById<ImageView>(Resource.Id.logoImageView).SetImageResource(Resource.Drawable.noimage);
+            }
             return view;
         }
     }
