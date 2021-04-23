@@ -26,7 +26,6 @@ namespace ListExercise
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-
             var items = new List<Car>
             {
                 new Car{ Manufacturer = "Ford", Model = "Focus", Kw = 80, Image = Resource.Drawable.ford },

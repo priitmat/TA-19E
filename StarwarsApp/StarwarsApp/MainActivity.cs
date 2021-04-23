@@ -7,22 +7,44 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using StarwarsApp.Models;
 using StarwarsApp.Services;
+using StarwarsApp.Adapters;
+using System;
+using Android.Content;
 
 namespace StarwarsApp
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        People data = new People();
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);            
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             var remoteDataService = new RemoteDataService();
-            var data = await remoteDataService.GetStarwarsPeople();
+            data = await remoteDataService.GetStarwarsPeople();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+
+            var listview = FindViewById<ListView>(Resource.Id.peopleListView);
+            listview.Adapter = new PeopleAdapter(this, data.results);
+            listview.ItemClick += OnListItemClick;
         }
+
+        private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var listView = sender as ListView;
+            var t = data.results[e.Position];
+            Android.Widget.Toast.MakeText(this, t.name, Android.Widget.ToastLength.Short).Show();
+
+
+            var intent = new Intent(this, typeof(DetailActivity));            
+            intent.PutExtra("PeopleDetail", JsonConvert.SerializeObject(t));
+            StartActivity(intent);
+
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
