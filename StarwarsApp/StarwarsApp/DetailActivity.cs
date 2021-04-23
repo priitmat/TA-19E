@@ -22,8 +22,8 @@ namespace StarwarsApp
             SetContentView(Resource.Layout.people_detail_layout);
 
             var nameText = FindViewById<TextView>(Resource.Id.nameTextview);
-            
-            var details = JsonConvert.DeserializeObject<PeopleDetails>(Intent.GetStringExtra("PeopleDetail"));
+            var peopleDetailInJson = Intent.GetStringExtra("PeopleDetail");
+            var details = JsonConvert.DeserializeObject<PeopleDetails>(peopleDetailInJson);
 
             nameText.Text = details.name;
 

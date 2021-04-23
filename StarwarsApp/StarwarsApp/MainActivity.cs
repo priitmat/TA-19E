@@ -34,10 +34,9 @@ namespace StarwarsApp
 
         private void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            var listView = sender as ListView;
-            var t = data.results[e.Position];
-            Android.Widget.Toast.MakeText(this, t.name, Android.Widget.ToastLength.Short).Show();
-
+            var rowNumberThatWasClicked = e.Position;
+            
+            var t = data.results[rowNumberThatWasClicked];            
 
             var intent = new Intent(this, typeof(DetailActivity));            
             intent.PutExtra("PeopleDetail", JsonConvert.SerializeObject(t));
