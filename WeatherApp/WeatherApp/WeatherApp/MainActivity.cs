@@ -3,6 +3,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Widget;
 using AndroidX.AppCompat.App;
+using WeatherApp.ListAdapters;
 using WeatherApp.Service;
 
 namespace WeatherApp
@@ -20,6 +21,7 @@ namespace WeatherApp
             var cityTextView = FindViewById<TextView>(Resource.Id.cityTextView);
             var tempTextView = FindViewById<TextView>(Resource.Id.tempTextView);
             var weatherImage = FindViewById<ImageView>(Resource.Id.weatherImage);
+            var forecastListView = FindViewById<ListView>(Resource.Id.forecasListView);
 
             var weatherService = new WeatherService();
 
@@ -28,6 +30,12 @@ namespace WeatherApp
             tempTextView.Text = weatherInfo.Main.Temp.ToString();
 
             weatherImage.SetImageBitmap(await weatherService.GetImageFromUrl($"https://openweathermap.org/img/wn/{weatherInfo.Weather[0].Icon}@2x.png"));
+
+            var weatherForecast = await weatherService.GetCityWeatherForecast("Tallinn");
+            forecastListView.Adapter = new ForecastListAdapter(this, weatherForecast.list);
+
+
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
