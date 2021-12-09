@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:hint="Pealkiri"
+        android:id="@+id/editText2"/>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sisu"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/editText1" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:text="Save"
+            android:id="@+id/saveButton"/>
+        <Button
+            android:layout_width="800px"
+            android:layout_height="100px"
+            android:text="Delete"
+            android:id="@+id/deleteButton"/>
+    </LinearLayout>
+</LinearLayout>

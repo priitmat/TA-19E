@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotesApp.CommandLine", "NotesApp.CommandLine\NotesApp.CommandLine.csproj", "{6FB1E43D-65BF-47BF-AE92-7EFA0FAF3A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Droid", "NotesApp.Droid\NotesApp.Droid.csproj", "{BD2553F1-E438-4AE1-8285-BB5379D79A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotesApp.Core", "NotesApp.Core\NotesApp.Core.csproj", "{0756227C-F158-47F2-892A-D27CC587D7A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FB1E43D-65BF-47BF-AE92-7EFA0FAF3A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB1E43D-65BF-47BF-AE92-7EFA0FAF3A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB1E43D-65BF-47BF-AE92-7EFA0FAF3A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB1E43D-65BF-47BF-AE92-7EFA0FAF3A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD2553F1-E438-4AE1-8285-BB5379D79A84}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0756227C-F158-47F2-892A-D27CC587D7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0756227C-F158-47F2-892A-D27CC587D7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0756227C-F158-47F2-892A-D27CC587D7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0756227C-F158-47F2-892A-D27CC587D7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1209ECCF-D713-4C7A-B690-E73ECBFF39B6}
+	EndGlobalSection
+EndGlobal
